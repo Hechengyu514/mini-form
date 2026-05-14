@@ -1,0 +1,14 @@
+{
+  "id": "tpl-feedback-form",
+  "title": "用户反馈",
+  "settings": { "showSubmitButton": true, "showSerialNumber": false },
+  "components": [
+    { "id": "tpl-fb-1", "type": "select", "title": "反馈类型", "placeholder": "请选择", "required": true, "options": [{ "id": "tpl-f-opt-1", "label": "功能建议", "value": "feature" }, { "id": "tpl-f-opt-2", "label": "Bug 报告", "value": "bug" }, { "id": "tpl-f-opt-3", "label": "体验问题", "value": "ux" }, { "id": "tpl-f-opt-4", "label": "其他", "value": "other" }] },
+    { "id": "tpl-fb-2", "type": "rate", "title": "整体满意度", "required": true },
+    { "id": "tpl-fb-3", "type": "slider", "title": "推荐意愿（0-10分）", "required": false, "props": { "min": 0, "max": 10, "step": 1 } },
+    { "id": "tpl-fb-4", "type": "textarea", "title": "详细描述", "placeholder": "请详细描述您的反馈内容...", "required": true, "validation": [{ "type": "required", "message": "请填写反馈内容" }, { "type": "minLength", "value": 10, "message": "至少输入10个字符" }] },
+    { "id": "tpl-fb-5", "type": "upload", "title": "截图/附件", "placeholder": "上传相关截图", "required": false, "props": { "maxCount": 5 } },
+    { "id": "tpl-fb-6", "type": "input", "title": "联系方式", "placeholder": "手机号或邮箱（选填）", "required": false },
+    { "id": "tpl-fb-submit", "type": "submit-button", "title": "提交反馈", "props": { "btnType": "primary", "align": "center", "block": true, "size": "large" }, "meta": { "isDisplay": true, "skipValidation": true } }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "tpl-registration-form",
+  "title": "活动报名表",
+  "settings": { "showSubmitButton": true, "showSerialNumber": true },
+  "components": [
+    { "id": "tpl-reg-1", "type": "input", "title": "姓名", "placeholder": "请输入真实姓名", "required": true, "validation": [{ "type": "required", "message": "请输入姓名" }] },
+    { "id": "tpl-reg-2", "type": "radio", "title": "性别", "required": true, "options": [{ "id": "tpl-r-opt-1", "label": "男", "value": "male" }, { "id": "tpl-r-opt-2", "label": "女", "value": "female" }] },
+    { "id": "tpl-reg-3", "type": "input", "title": "手机号", "placeholder": "请输入手机号", "required": true, "validation": [{ "type": "required", "message": "请输入手机号" }, { "type": "pattern", "pattern": "phone", "message": "请输入有效的手机号" }] },
+    { "id": "tpl-reg-4", "type": "input", "title": "邮箱", "placeholder": "请输入邮箱", "required": true, "validation": [{ "type": "required", "message": "请输入邮箱" }, { "type": "pattern", "pattern": "email", "message": "请输入有效邮箱" }] },
+    { "id": "tpl-reg-5", "type": "input", "title": "身份证号", "placeholder": "请输入身份证号", "required": false, "validation": [{ "type": "pattern", "pattern": "idCard", "message": "请输入有效身份证号" }] },
+    { "id": "tpl-reg-6", "type": "date", "title": "参加日期", "placeholder": "请选择参加的日期", "required": true },
+    { "id": "tpl-reg-7", "type": "select", "title": "用餐偏好", "placeholder": "请选择", "required": false, "options": [{ "id": "tpl-r-opt-3", "label": "无偏好", "value": "none" }, { "id": "tpl-r-opt-4", "label": "素食", "value": "vegetarian" }, { "id": "tpl-r-opt-5", "label": "清真", "value": "halal" }] },
+    { "id": "tpl-reg-8", "type": "textarea", "title": "备注", "placeholder": "如有特殊需求请在此说明", "required": false },
+    { "id": "tpl-reg-submit", "type": "submit-button", "title": "提交报名", "props": { "btnType": "primary", "align": "center", "block": true, "size": "large" }, "meta": { "isDisplay": true, "skipValidation": true } }
+  ]
+}

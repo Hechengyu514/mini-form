@@ -1,0 +1,14 @@
+{
+  "id": "tpl-survey-form",
+  "title": "问卷调查",
+  "settings": { "showSubmitButton": true, "showSerialNumber": true },
+  "components": [
+    { "id": "tpl-survey-1", "type": "input", "title": "姓名", "placeholder": "请输入姓名", "required": false },
+    { "id": "tpl-survey-2", "type": "number", "title": "年龄", "placeholder": "请输入年龄", "required": false, "validation": [{ "type": "min", "value": 1, "message": "年龄不能小于1" }, { "type": "max", "value": 150, "message": "请输入有效年龄" }] },
+    { "id": "tpl-survey-3", "type": "radio", "title": "性别", "required": true, "options": [{ "id": "tpl-s-opt-1", "label": "男", "value": "male" }, { "id": "tpl-s-opt-2", "label": "女", "value": "female" }] },
+    { "id": "tpl-survey-4", "type": "rate", "title": "产品满意度", "required": true },
+    { "id": "tpl-survey-5", "type": "checkbox", "title": "常用功能（可多选）", "required": true, "options": [{ "id": "tpl-s-opt-3", "label": "功能A", "value": "a" }, { "id": "tpl-s-opt-4", "label": "功能B", "value": "b" }, { "id": "tpl-s-opt-5", "label": "功能C", "value": "c" }, { "id": "tpl-s-opt-6", "label": "功能D", "value": "d" }] },
+    { "id": "tpl-survey-6", "type": "textarea", "title": "改进建议", "placeholder": "请分享您对我们的建议...", "required": false },
+    { "id": "tpl-survey-submit", "type": "submit-button", "title": "提交问卷", "props": { "btnType": "primary", "align": "center", "block": true, "size": "large" }, "meta": { "isDisplay": true, "skipValidation": true } }
+  ]
+}

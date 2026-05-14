@@ -1,0 +1,17 @@
+{
+  "id": "tpl-leave-request-form",
+  "title": "请假申请表",
+  "settings": { "showSubmitButton": true, "showSerialNumber": true },
+  "components": [
+    { "id": "tpl-leave-1", "type": "input", "title": "申请人", "placeholder": "请输入姓名", "required": true, "validation": [{ "type": "required", "message": "请输入姓名" }] },
+    { "id": "tpl-leave-2", "type": "select", "title": "部门", "placeholder": "请选择部门", "required": true, "options": [{ "id": "tpl-l-opt-1", "label": "技术部", "value": "tech" }, { "id": "tpl-l-opt-2", "label": "产品部", "value": "product" }, { "id": "tpl-l-opt-3", "label": "设计部", "value": "design" }, { "id": "tpl-l-opt-4", "label": "市场部", "value": "marketing" }] },
+    { "id": "tpl-leave-3", "type": "radio", "title": "请假类型", "required": true, "options": [{ "id": "tpl-l-opt-5", "label": "年假", "value": "annual" }, { "id": "tpl-l-opt-6", "label": "事假", "value": "personal" }, { "id": "tpl-l-opt-7", "label": "病假", "value": "sick" }, { "id": "tpl-l-opt-8", "label": "婚假", "value": "marriage" }] },
+    { "id": "tpl-leave-4", "type": "date", "title": "开始日期", "placeholder": "请选择开始日期", "required": true, "validation": [{ "type": "required", "message": "请选择开始日期" }] },
+    { "id": "tpl-leave-5", "type": "date", "title": "结束日期", "placeholder": "请选择结束日期", "required": true, "validation": [{ "type": "required", "message": "请选择结束日期" }] },
+    { "id": "tpl-leave-6", "type": "number", "title": "请假天数", "placeholder": "请输入天数", "required": true, "validation": [{ "type": "required", "message": "请输入天数" }, { "type": "min", "value": 0.5, "message": "至少0.5天" }] },
+    { "id": "tpl-leave-7", "type": "textarea", "title": "请假原因", "placeholder": "请详细说明请假原因...", "required": true, "validation": [{ "type": "required", "message": "请填写请假原因" }] },
+    { "id": "tpl-leave-8", "type": "input", "title": "紧急联系人", "placeholder": "请输入紧急联系人姓名", "required": false },
+    { "id": "tpl-leave-9", "type": "input", "title": "紧急联系电话", "placeholder": "请输入紧急联系电话", "required": false, "validation": [{ "type": "pattern", "pattern": "phone", "message": "请输入有效手机号" }] },
+    { "id": "tpl-leave-submit", "type": "submit-button", "title": "提交申请", "props": { "btnType": "primary", "align": "center", "block": true, "size": "large" }, "meta": { "isDisplay": true, "skipValidation": true } }
+  ]
+}
