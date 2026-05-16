@@ -1,0 +1,1 @@
+import{A as e,C as t,D as n,h as r,l as i,p as a,q as o}from"./vendor-antd-CEcjoy5z.js";var s=r({__name:`Divider`,props:{config:{}},setup(r){return(s,c)=>{let l=n(`a-divider`);return t(),i(l,null,{default:e(()=>[a(o(r.config.title||``),1)]),_:1})}}});export{s as default};
